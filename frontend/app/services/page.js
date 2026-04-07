@@ -1,10 +1,11 @@
 'use client';
 
+import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
-export default function Services() {
+function ServicesContent() {
   const searchParams = useSearchParams();
   const type = searchParams.get('type');
 
@@ -139,5 +140,13 @@ export default function Services() {
         </div>
       </section>
     </div>
+  );
+}
+
+export default function Services() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Chargement...</div>}>
+      <ServicesContent />
+    </Suspense>
   );
 }

@@ -21,6 +21,12 @@ const uploadRoutes = require('./routes/upload');
 // Initialize app
 const app = express();
 
+// ==================== PROXY SETTINGS ====================
+
+// Trust proxy - Required for rate limiting to work correctly behind a reverse proxy (e.g., Render, Heroku, AWS)
+// This allows Express to read the X-Forwarded-For header sent by the proxy
+app.set('trust proxy', 1);
+
 // ==================== SECURITY MIDDLEWARE ====================
 
 // Helmet - Set security HTTP headers
