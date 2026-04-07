@@ -55,7 +55,7 @@ app.use(helmet({
 }));
 
 // CORS - Restricted origin (not allow all)
-const allowedOrigins = (process.env.ALLOWED_ORIGINS || 'http://localhost:3000').split(',');
+const allowedOrigins = (process.env.ALLOWED_ORIGINS || 'https://bee-5veq.vercel.app').split(',');
 const corsOptions = {
   origin: function (origin, callback) {
     // Allow requests with no origin (like mobile apps or curl requests)
