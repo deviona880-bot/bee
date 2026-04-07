@@ -38,7 +38,7 @@ app.use(helmet({
       scriptSrc: ["'self'"],
       imgSrc: ["'self'", 'data:', 'https:', 'https://res.cloudinary.com', 'http://localhost:5000'],
       fontSrc: ["'self'", 'data:'],
-      connectSrc: ["'self'", 'http://localhost:5000', 'http://localhost:3000'],
+      connectSrc: ["'self'", 'http://localhost:5000', 'http://localhost:3000', 'https://bee-5veq.vercel.app'],
       frameSrc: ["'none'"],
       objectSrc: ["'none'"]
     }
